@@ -11,3 +11,11 @@ default-run = "dioxus"
 [[bin]]
 name = "dioxus"
 path = "dioxus/src/main.rs"
+
+[[bin]]
+name = "bevy"
+path = "bevy/src/main.rs"
+
+[[bin]]
+name = "makepad"
+path = "makepad/src/main.rs"
