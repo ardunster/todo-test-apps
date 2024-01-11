@@ -2,7 +2,12 @@
 name = "todo-test-apps"
 version = "0.1.0"
 edition = "2021"
+default-run = "dioxus"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[[bin]]
+name = "dioxus"
+path = "dioxus/src/main.rs"
