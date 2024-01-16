@@ -1,9 +1,12 @@
 #![allow(non_snake_case)]
 
+mod header;
+
 use dioxus_router::prelude::*;
 
 use dioxus::prelude::*;
 use log::LevelFilter;
+use crate::header::Header;
 
 fn main() {
     println!("Hello, Dioxus!");
@@ -39,13 +42,10 @@ fn Blog(cx: Scope, id: i32) -> Element {
 #[inline_props]
 fn Home(cx: Scope) -> Element {
     let mut count = use_state(cx, || 0);
-    let heading_text = "Hello, Dioxus!";
     let intro_text = "This is a brief TODO app to test out the functionality of Dioxus in building a desktop native app.";
 
     cx.render(rsx! {
-        h1 {
-            heading_text
-        }
+        Header {}
         div {
             padding: "0.5rem",
             intro_text
