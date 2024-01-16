@@ -1,14 +1,21 @@
 [package]
 name = "todo-test-apps"
 version = "0.1.0"
+authors = ["Anna Dunster <anna@annardunster.com>"]
 edition = "2021"
 default-run = "dioxus"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dioxus = "0.4.3"
-dioxus-desktop = "0.4.3"
+dioxus-desktop = { version = "0.4" }
+dioxus = { version = "0.4" }
+
+dioxus-router = { version = "0.4" }
+
+# Debug
+log = "0.4.19"
+dioxus-logger = "0.4.1"
 
 [[bin]]
 name = "dioxus"
