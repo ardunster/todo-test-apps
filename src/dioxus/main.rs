@@ -39,19 +39,25 @@ fn Blog(cx: Scope, id: i32) -> Element {
 #[inline_props]
 fn Home(cx: Scope) -> Element {
     let mut count = use_state(cx, || 0);
+    let heading_text = "Hello, Dioxus!";
+    let intro_text = "This is a brief TODO app to test out the functionality of Dioxus in building a desktop native app.";
 
     cx.render(rsx! {
+        h1 {
+            heading_text
+        }
         div {
-            "Hello, Dioxus!"
+            padding: "0.5rem",
+            intro_text
         }
         Link {
             to: Route::Blog {
                 id: *count.get()
             },
-            "Go to blog"
+            "Go to blog post #{count} "
         }
         div {
-            h1 { "High-Five counter: {count}" }
+            h2 { "High-Five counter: {count}" }
             button { onclick: move |_| count += 1, "Up high!" }
             button { onclick: move |_| count -= 1, "Down low!" }
 
