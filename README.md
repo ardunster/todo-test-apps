@@ -1,3 +1,5 @@
+Note: Realized that it's going to be a lot easier to do these tests as separate repositories, rather than trying to deal with conflicting setup and run instructions and dependencies in one repository. Will be archiving and eventually deleting this start.
+
 # todo-test-apps
 Test TODO apps to familiarize myself with Rust GUI libraries
 
